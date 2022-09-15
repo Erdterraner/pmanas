@@ -18,4 +18,9 @@ public class DashboardsController : Controller
     {
         return View(_theme.getPageView("Dashboards", "Index.cshtml"));
     }
+    
+    public IActionResult management()
+    {
+        return View(_theme.getPageView("Dashboards", "Management.cshtml"));
+    }
 }

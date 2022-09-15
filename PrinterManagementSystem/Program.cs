@@ -87,6 +87,10 @@ app.MapControllerRoute(name: "error",
                 pattern: "error",
                 defaults: new { controller = "System", action = "error" });
 
+app.MapControllerRoute(name: "management",
+    pattern: "management",
+    defaults: new { controller = "Dashboards", action = "management" });
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Dashboards}/{action=Index}/{id?}");

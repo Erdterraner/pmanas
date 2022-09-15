@@ -24,4 +24,5 @@ public class SystemController : Controller
     {
         return View(_theme.getPageView("System", "Error.cshtml"));
     }
+    
 }
