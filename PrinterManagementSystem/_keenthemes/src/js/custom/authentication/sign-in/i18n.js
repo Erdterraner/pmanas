@@ -32,7 +32,7 @@ var KTAuthI18nDemo = function() {
 			"French" : "Ou",
 		},
 
-		// Sign in	
+		// Anmelden	
 		"sign-in-head-desc" : {
 			"English" : "Not a Member yet?",
 			"Spanish" : "¿No eres miembro todavía?",
@@ -50,7 +50,7 @@ var KTAuthI18nDemo = function() {
 		},	 
 
 		"sign-in-title" : {
-			"English" : "Sign In",
+			"English" : "Anmelden",
 			"Spanish" : "Iniciar Sesión",
 			"German" : "Registrarse",
 			"Japanese" : "ログイン",
@@ -82,7 +82,7 @@ var KTAuthI18nDemo = function() {
 		},
 
 		"sign-in-submit" : {
-			"English" : "Sign In",
+			"English" : "Anmelden",
 			"Spanish" : "Iniciar Sesión",
 			"German" : "Registrarse",
 			"Japanese" : "ログイン",
@@ -99,7 +99,7 @@ var KTAuthI18nDemo = function() {
 		},	
 
 		"sign-up-head-link" : {
-			"English" : "Sign In",
+			"English" : "Anmelden",
 			"Spanish" : "Iniciar Sesión",
 			"German" : "Registrarse",
 			"Japanese" : "ログイン",
