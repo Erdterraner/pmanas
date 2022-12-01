@@ -2,8 +2,18 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Starterkit._keenthemes;
 using Starterkit._keenthemes.libs;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Starterkit.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("StarterkitContextConnection") ?? throw new InvalidOperationException("Connection string 'StarterkitContextConnection' not found.");
+
+builder.Services.AddDbContext<StarterkitContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<StarterkitUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<StarterkitContext>();
 
 builder.Services.AddDistributedMemoryCache();  
 builder.Services.AddSession(options => {  
@@ -63,6 +73,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 app.UseSession();
